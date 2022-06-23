@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rgI-P8-C5X">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joe-W1-1d6">
+                                <rect key="frame" x="148" y="550" width="118" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Tilt Shift"/>
+                                <connections>
+                                    <segue destination="OvJ-N0-9wx" kind="show" id="RrZ-6x-ED4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDq-K9-y3W">
+                                <rect key="frame" x="129" y="631" width="156" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Tilt Shift Table"/>
+                                <connections>
+                                    <segue destination="E2j-hQ-yfK" kind="show" id="U3x-0R-RyR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QDq-K9-y3W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="alx-ry-RjA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QDq-K9-y3W" secondAttribute="bottom" constant="200" id="dZH-3s-Pv0"/>
+                            <constraint firstItem="Joe-W1-1d6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fKW-Ik-ijR"/>
+                            <constraint firstItem="QDq-K9-y3W" firstAttribute="top" secondItem="Joe-W1-1d6" secondAttribute="bottom" constant="50" id="je9-Vk-V42"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FqL-SC-Gjs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="109.82142857142857"/>
+        </scene>
+        <!--Tilt Shift Table View Controller-->
+        <scene sceneID="S20-a9-oj6">
+            <objects>
+                <tableViewController id="E2j-hQ-yfK" customClass="TiltShiftTableViewController" customModule="Concurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="200" estimatedRowHeight="200" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="iSx-MJ-rwV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="200" id="Cew-qm-I48" customClass="PhotoCell" customModule="Concurrency" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cew-qm-I48" id="rAh-aZ-Sto">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TeF-Uc-2vx">
+                                            <rect key="frame" x="80" y="20" width="254" height="160"/>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Gqd-M1-df8">
+                                            <rect key="frame" x="197" y="90" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TeF-Uc-2vx" firstAttribute="top" secondItem="rAh-aZ-Sto" secondAttribute="top" constant="20" symbolic="YES" id="7CM-ar-Xhs"/>
+                                        <constraint firstAttribute="bottom" secondItem="TeF-Uc-2vx" secondAttribute="bottom" constant="20" symbolic="YES" id="9e5-GK-tB5"/>
+                                        <constraint firstItem="TeF-Uc-2vx" firstAttribute="leading" secondItem="rAh-aZ-Sto" secondAttribute="leading" constant="80" id="CqS-v0-bqt"/>
+                                        <constraint firstAttribute="trailing" secondItem="TeF-Uc-2vx" secondAttribute="trailing" constant="80" id="Jbm-Lq-mkj"/>
+                                        <constraint firstItem="Gqd-M1-df8" firstAttribute="centerX" secondItem="TeF-Uc-2vx" secondAttribute="centerX" id="k6F-4j-lch"/>
+                                        <constraint firstItem="Gqd-M1-df8" firstAttribute="centerY" secondItem="TeF-Uc-2vx" secondAttribute="centerY" id="tYq-AJ-pKP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="Gqd-M1-df8" id="qGv-GS-bPu"/>
+                                    <outlet property="photoImageView" destination="TeF-Uc-2vx" id="hza-2F-dyR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="E2j-hQ-yfK" id="zxS-Hb-3nA"/>
+                            <outlet property="delegate" destination="E2j-hQ-yfK" id="hVN-S1-mht"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4TC-2Y-HZf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmb-hM-08k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032" y="802"/>
+        </scene>
+        <!--Tilt Shift Example View Controller-->
+        <scene sceneID="UQb-0K-hhE">
+            <objects>
+                <viewController id="OvJ-N0-9wx" customClass="TiltShiftExampleViewController" customModule="Concurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XZS-6R-B5I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_road_small" translatesAutoresizingMaskIntoConstraints="NO" id="bty-UV-ZtU">
+                                <rect key="frame" x="50" y="108" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bty-UV-ZtU" secondAttribute="height" multiplier="1:1" id="T1f-ES-oC4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gQd-NY-2LD">
+                                <rect key="frame" x="50" y="472" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gQd-NY-2LD" secondAttribute="height" multiplier="1:1" id="3Kd-wL-ps6"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Cj5-iu-am1">
+                                <rect key="frame" x="197" y="619" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tilt Shifting ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6F-Zx-bQN">
+                                <rect key="frame" x="154.5" y="590" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lsN-4J-rQD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cj5-iu-am1" firstAttribute="centerY" secondItem="gQd-NY-2LD" secondAttribute="centerY" id="1V9-Mx-T8S"/>
+                            <constraint firstItem="gQd-NY-2LD" firstAttribute="top" secondItem="bty-UV-ZtU" secondAttribute="bottom" constant="50" id="B7f-mD-jjE"/>
+                            <constraint firstItem="Cj5-iu-am1" firstAttribute="centerX" secondItem="gQd-NY-2LD" secondAttribute="centerX" id="Mah-Ab-BjW"/>
+                            <constraint firstItem="p6F-Zx-bQN" firstAttribute="centerX" secondItem="gQd-NY-2LD" secondAttribute="centerX" id="Pe8-dK-bFk"/>
+                            <constraint firstItem="lsN-4J-rQD" firstAttribute="trailing" secondItem="gQd-NY-2LD" secondAttribute="trailing" constant="50" id="Qbd-9j-o4Y"/>
+                            <constraint firstItem="lsN-4J-rQD" firstAttribute="trailing" secondItem="bty-UV-ZtU" secondAttribute="trailing" constant="50" id="UVg-Kj-nQI"/>
+                            <constraint firstItem="bty-UV-ZtU" firstAttribute="leading" secondItem="lsN-4J-rQD" secondAttribute="leading" constant="50" id="ZSj-rY-vfx"/>
+                            <constraint firstItem="lsN-4J-rQD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gQd-NY-2LD" secondAttribute="bottom" constant="20" id="dPw-MQ-dXh"/>
+                            <constraint firstItem="bty-UV-ZtU" firstAttribute="top" secondItem="lsN-4J-rQD" secondAttribute="top" constant="20" id="eyg-Tk-hbZ"/>
+                            <constraint firstItem="gQd-NY-2LD" firstAttribute="leading" secondItem="lsN-4J-rQD" secondAttribute="leading" constant="50" id="mwa-oN-eRk"/>
+                            <constraint firstItem="Cj5-iu-am1" firstAttribute="top" secondItem="p6F-Zx-bQN" secondAttribute="bottom" constant="8" symbolic="YES" id="q6p-fy-IY5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="In8-Wa-7mz"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Cj5-iu-am1" id="rxA-sJ-NBc"/>
+                        <outlet property="filteredImageView" destination="gQd-NY-2LD" id="Com-1l-2jF"/>
+                        <outlet property="tiltShiftingLabel" destination="p6F-Zx-bQN" id="MCe-Cf-fdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N8w-tc-f5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="110"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x4v-2I-Sag">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rgI-P8-C5X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tDX-r2-tPc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="puc-SO-Phd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtV-lT-ta0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dark_road_small" width="500" height="574"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
